@@ -3,8 +3,7 @@ backend:
   name: git-gateway
   repo: arjun-tarakesh/potfolio
   branch: main
-  base_url: https://api.netlify.com
-  auth_endpoint: oauth2/authorize
+
 
 media_folder: "assets/img/uploads"
 public_folder: "/assets/img/uploads"
@@ -21,4 +20,6 @@ collections:
       - { label: "Excerpt", name: "excerpt", widget: "string", required: false }
       - { label: "Cover Image", name: "image", widget: "image", required: false }
       - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Cover Image", name: "image", widget: "image", required: false, default: "" }
+
 
