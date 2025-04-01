@@ -1,6 +1,6 @@
 # admin/config.yml
 backend:
-  name: github
+  name: git-gateway
   repo: arjun-tarakesh/potfolio
   branch: main
   base_url: https://api.netlify.com
