@@ -1,33 +1,42 @@
 ---
-title: Text and Typography
-description: Examples of text, typography, math equations, diagrams, flowcharts, pictures, videos, and more.
-author: cotes
-date: 2019-08-08 11:33:00 +0800
-categories: [Blogging, Demo]
-tags: [typography]
-pin: true
 math: true
 mermaid: true
-image: /commons/devices-mockup.png
+author: cotes
+title: Text and Typography
+date: 2025-04-02T07:51:00.000Z
 published: true
-
+pin: true
+tags:
+  - typography
+categories:
+  - Blogging
+  - Demo
+image: /commons/devices-mockup.png
+description: Examples of text, typography, math equations, diagrams, flowcharts,
+  pictures, videos, and more.
 ---
-
 ## Headings
 
 <!-- markdownlint-capture -->
+
 <!-- markdownlint-disable -->
+
 # H1 — heading
+
 {: .mt-4 .mb-0 }
 
 ## H2 — heading
+
 {: data-toc-skip='' .mt-4 .mb-0 }
 
 ### H3 — heading
+
 {: data-toc-skip='' .mt-4 .mb-0 }
 
 #### H4 — heading
+
 {: data-toc-skip='' .mt-4 }
+
 <!-- markdownlint-restore -->
 
 ## Paragraph
@@ -44,16 +53,19 @@ Quisque egestas convallis ipsum, ut sollicitudin risus tincidunt a. Maecenas int
 
 ### Unordered list
 
-- Chapter
-  - Section
-    - Paragraph
+* Chapter
+
+  * Section
+
+    * Paragraph
 
 ### ToDo list
 
-- [ ] Job
-  - [x] Step 1
-  - [x] Step 2
-  - [ ] Step 3
+* Job
+
+  * Step 1
+  * Step 2
+  * Step 3
 
 ### Description list
 
@@ -65,32 +77,35 @@ Moon
 
 ## Block Quote
 
-> This line shows the _block quote_.
+> This line shows the *block quote*.
 
 ## Prompts
 
 <!-- markdownlint-capture -->
+
 <!-- markdownlint-disable -->
+
 > An example showing the `tip` type prompt.
-{: .prompt-tip }
-
+> {: .prompt-tip }
+>
 > An example showing the `info` type prompt.
-{: .prompt-info }
-
+> {: .prompt-info }
+>
 > An example showing the `warning` type prompt.
-{: .prompt-warning }
-
+> {: .prompt-warning }
+>
 > An example showing the `danger` type prompt.
-{: .prompt-danger }
+> {: .prompt-danger }
+
 <!-- markdownlint-restore -->
 
 ## Tables
 
 | Company                      | Contact          | Country |
-| :--------------------------- | :--------------- | ------: |
+| ---------------------------- | ---------------- | ------- |
 | Alfreds Futterkiste          | Maria Anders     | Germany |
-| Island Trading               | Helen Bennett    |      UK |
-| Magazzini Alimentari Riuniti | Giovanni Rovelli |   Italy |
+| Island Trading               | Helen Bennett    | UK      |
+| Magazzini Alimentari Riuniti | Giovanni Rovelli | Italy   |
 
 ## Links
 
@@ -132,11 +147,12 @@ fi;
   "colors/light-typography",
   "colors/dark-typography";
 ```
+
 {: file='_sass/jekyll-theme-chirpy.scss'}
 
 ## Mathematics
 
-The mathematics powered by [**MathJax**](https://www.mathjax.org/):
+The mathematics powered by **[MathJax](https://www.mathjax.org/)**:
 
 $$
 \begin{equation}
@@ -166,7 +182,7 @@ $$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$
 ### Default (with caption)
 
 ![Desktop View](/posts/20190808/mockup.png){: width="972" height="589" }
-_Full screen width and center alignment_
+*Full screen width and center alignment*
 
 ### Left aligned
 
