@@ -51,6 +51,7 @@ refactor: true
 
 
 <div id="post-list" class="flex-grow-1 px-xl-1">
+<div class="post-content">
 <div class="card-wrapper card my-4 px-3 py-4">
   <h1 class="card-title my-2 mt-md-0">$ whoami</h1>
   <p>Hi, I'm <strong>Arjun Tarakesh</strong> — an infosec junkie & full-time tech tinkerer.<br>
@@ -111,7 +112,9 @@ refactor: true
     Consider it my terminal, just made public.  
     <br><strong>— Arjun</strong>
   </blockquote>
-</div>
+  </div> <!-- end .card-wrapper -->
+</div> <!-- end .post-content -->
+
   {% for post in posts %}
     <article class="card-wrapper card">
       <a href="{{ post.url | relative_url }}" class="post-preview row g-0 flex-md-row-reverse">
