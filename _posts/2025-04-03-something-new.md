@@ -1,5 +1,5 @@
 ---
-title: Something new
+title: "Something new I added "
 date: 2025-04-03 19:07:00
 categories:
   - general
