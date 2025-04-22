@@ -6,8 +6,10 @@ categories:
   - Projects
 published: true
 hasImage: true
-image: https://unsplash.com/photos/woman-in-white-shirt-sitting-on-chair-eJ93vVbyVUo
+image: /assets/img/uploads/photo-1580077910645-a6fd54032e15.avif
 ---
+#### `Read the full blog here:`[`https://medium.com/@arjuntarakesh01/simulating-and-analyzing-blackmatter-ransomware-behavior-adff20c2d9e0`](https://medium.com/@arjuntarakesh01/simulating-and-analyzing-blackmatter-ransomware-behavior-adff20c2d9e0)
+
 # Introduction to BlackMatter Ransomware
 
 BlackMatter is a ransomware-as-a-service (RaaS) family that emerged in July 2021, believed to combine the “best features” of the DarkSide, REvil, and LockBit ransomware operations. In practice, BlackMatter targets organizations (especially those with $100M+ revenue) in big-game ransomware attacks, often tailoring each attack’s payload — for instance, generating a unique ransom note with victim-specific details. It encrypts data on Windows (and even Linux servers) using strong cryptography, and demands hefty ransoms for decryption. This blog post will demonstrate a dynamic malware analysis of a BlackMatter sample using the ANY.RUN sandbox platform. We’ll walk through key behaviors observed (Indicators of Compromise, or IOCs) and map how this analysis feeds into the first two phases of the NIST Incident Handling process: **Preparation** and **Detection & Analysis**. Along the way, we’ll highlight how such analysis aids in identifying and responding to an incident, and suggest practical tips and tools — from free sandboxes and VirusTotal to YARA rules — that readers can adapt in their own environments. Finally, we’ll touch on what well-equipped teams (with SIEM and EDR tools like Splunk and Microsoft Defender) could do in later incident response phases (Containment, Eradication, and Post-Incident).
@@ -15,8 +17,6 @@ BlackMatter is a ransomware-as-a-service (RaaS) family that emerged in July 2021
 ![](/assets/img/uploads/1_ezjjm6clmqfbbm7y5y8c6q.webp)
 
 ![The text file created by the ransomware](/assets/img/uploads/1_gky0nluu4za5m04v3a86eq.webp)
-
-
 
 # Dynamic Analysis of BlackMatter using ANY.RUN
 
@@ -59,9 +59,7 @@ Virustotal — Activity summary
 
 ![](/assets/img/uploads/1_9_lsf3qdvcrnl6cpnfpcjq.webp)
 
-
-
-***Figure:*** *ANY.RUN sandbox “Process” view highlighting the BlackMatter sample’s behavior. The malware (red-outlined) launches via a UAC bypass (*`_CMSTPLUA_` *and* `_dllhost.exe_`*) to gain high integrity, injects into a* `_svchost.exe_` *process (labeled* ***\#BLACKMATTER**), and later spawns Notepad to display the ransom note. The sandbox also flags numerous suspicious behaviors at the bottom (e.g. low-level disk access, added to startup, network attacks detected, integrity level elevation).*
+***Figure:*** *ANY.RUN sandbox “Process” view highlighting the BlackMatter sample’s behavior. The malware (red-outlined) launches via a UAC bypass (*`_CMSTPLUA_` *and* `_dllhost.exe_`*) to gain high integrity, injects into a* `_svchost.exe_` *process (labeled* **\*#BLACKMATTER**), and later spawns Notepad to display the ransom note. The sandbox also flags numerous suspicious behaviors at the bottom (e.g. low-level disk access, added to startup, network attacks detected, integrity level elevation).*
 
 As shown above, the sandbox’s process graph and alerts make it clear that this is ransomware activity. We have identified the **malware sample** (and could submit its hash to VirusTotal for cross-reference), the **artifacts it leaves** (like the ransom note and registry keys), and the **C2 communications** it attempts. All of these pieces are invaluable for incident response. Now, let’s connect these findings to how an incident responder would use them in the context of NIST’s Incident Response phases.
 
